@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./style.css">
-  <script src="script.js" defer></script>
+  <script src="./script.js" defer></script>
 </head>
 <body>
   <div class="linux-commands">
@@ -13,22 +13,22 @@
 
     <section class="code-group" id="update-and-upgrade-group">
       <h2>Updating and Upgrading</h2>
-      <div class="update">
+      <div class="update" onclick="copyToClipboard(event)">
         <h3>Update</h3>
-        <div class="code">
-          <p>sudo apt update -y</p>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt update -y;</p>
         </div>
       </div>
       <div class="upgrade">
         <h3>Upgrade</h3>
-        <div class="code">
-          <p>sudo apt upgrade -y</p>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt upgrade -y;</p>
         </div>
       </div>
       <div class="update-upgrade">
         <h3>Both Update and Upgrade</h3>
-        <div class="code">
-          <p>sudo apt update -y && sudo apt upgrade -y</p>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt update -y && sudo apt upgrade -y;</p>
         </div>
       </div>
     </section>
@@ -37,14 +37,14 @@
       <h2>Power Control</h2>
       <div class="reboot">
         <h3>Reboot</h3>
-        <div class="code">
-          <p>sudo reboot</p>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo reboot;</p>
         </div>
       </div>
       <div class="shutdown">
         <h3>Shutdown</h3>
-        <div class="code">
-          <p>shutdown -h now</p>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>shutdown -h now;</p>
         </div>
       </div>
     </section>
@@ -53,8 +53,8 @@
       <h2>Install Commands</h2>
       <div class="7zip">
         <h3>7zip</h3>
-        <div class="code">
-          <p>sudo apt install p7zip-full -y</p>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install p7zip-full -y;</p>
         </div>
       </div>
     </section>
