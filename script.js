@@ -13,3 +13,8 @@ function copyToClipboard(e) {
     }
   }
 }
+
+// Complete function for showing "Copied" notification in corner
+function displayCopyNotification(e) {
+  
+}
