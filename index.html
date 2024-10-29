@@ -12,6 +12,18 @@
   <div class="linux-commands">
     <h1>My Linux Command Reference</h1>
 
+    <div class="controls">
+      <div>
+        <input type="checkbox" name="copy-checkbox" id="copy-control" checked onchange="allowClickToCopy = !allowClickToCopy">
+        <label for="copy-control">Click to copy</label>
+      </div>
+
+      <div>        
+        <input type="checkbox" name="alert-checkbox" id="alert-control" checked onchange="enableAlerts = !enableAlerts"> 
+        <label for="alert-control">Enable dependency alerts</label>
+      </div>
+    </div>
+
     <section class="code-group" id="update-and-upgrade-group">
       <h2>Updating and Upgrading</h2>
       <div class="update" onclick="copyToClipboard(event)">
@@ -50,12 +62,221 @@
       </div>
     </section>
 
+    <section class="code-group" id="tar">
+      <h2>Tar</h2>
+      <div class="code" onclick="copyToClipboard(event)">
+        <p>tar -zxvf ...</p>
+      </div>
+    </section>
+
     <section class="code-group" id="install-commands">
       <h2>Install Commands</h2>
       <div class="7zip">
         <h3>7zip</h3>
         <div class="code" onclick="copyToClipboard(event)">
           <p>sudo apt install p7zip-full -y;</p>
+        </div>
+      </div>
+
+      <div class="curl">
+        <h3>Curl</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install curl -y;</p>
+        </div>
+      </div>
+
+      <div class="flatpak">
+        <h3>Flatpak</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install flatpak -y;</p>
+        </div>
+      </div>
+
+      <div class="gimp">
+        <h3>Gimp</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install gimp -y;</p>
+        </div>
+      </div>
+
+      <div class="git">
+        <h3>Git</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>
+            # Get Git Configuration Information <br>
+            read -p "Enter your preferred username for Git: " name; <br>
+            read -p "Enter your preferred email for Git: " email; <br> <br>
+
+            # Install Git <br>
+            sudo apt install git-all -y; <br> <br>
+
+            # Configure Git <br>
+            git config --global user.name $name; <br>
+            git config --global user.name; <br>
+            git config --global user.email $email; <br>
+            git config --global user.email; <br>
+          </p>
+        </div>
+      </div>
+
+      <div class="neovim">
+        <h3>Neovim</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install neovim -y;</p>
+        </div>
+      </div>
+
+      <div class="nvm">
+        <h3>Node Version Manager + Node & NPM</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p class="dependency">
+            # Install Node Version Manager <br>
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash; <br> <br>
+
+            # Install latest versions of Node & NPM <br>
+            nvm install --lts;
+          </p>
+        </div>
+      </div>
+
+      <div class="obs">
+        <h3>OBS Studio</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install obs-studio -y;</p>
+        </div>
+      </div>
+
+      <div class="perl">
+        <h3>Perl</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p class="dependency">curl -L http://xrl.us/installperlnix | bash;</p>
+        </div>
+      </div>
+
+      <div class="php">
+        <h3>PHP</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install php -y;</p>
+        </div>
+      </div>
+
+      <div class="powershell">
+        <h3>Powershell</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p class="dependency">
+            ################################### <br>
+            # Prerequisites <br> <br>
+
+            # Update the list of packages <br>
+            sudo apt-get update <br> <br>
+
+            # Install pre-requisite packages. <br>
+            sudo apt-get install -y wget <br> <br>
+
+            # Download the PowerShell package file <br>
+            wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/powershell_7.4.6-1.deb_amd64.deb <br> <br>
+
+            ################################### <br>
+            # Install the PowerShell package <br>
+            sudo dpkg -i powershell_7.4.6-1.deb_amd64.deb <br> <br>
+
+            # Resolve missing dependencies and finish the install (if necessary) <br>
+            sudo apt-get install -f <br> <br>
+
+            # Delete the downloaded package file <br>
+            rm powershell_7.4.6-1.deb_amd64.deb <br> <br>
+
+            # Start PowerShell <br>
+            pwsh
+          </p>
+        </div>
+      </div>
+
+      <div class="python">
+        <h3>Python</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>
+            sudo apt-get install python3.6 -y && sudo apt-get install python3-pip -y;
+          </p>
+        </div>
+      </div>
+
+      <div class="ruby">
+        <h3>Ruby</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>
+            sudo apt-get install ruby-full -y;
+          </p>
+        </div>
+      </div>
+
+      <div class="rust">
+        <h3>Rust</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p class="dependency">
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;
+          </p>
+        </div>
+      </div>
+
+      <div class="typescript">
+        <h3>TypeScript</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p class="dependency">npm install --global typescript;</p>
+        </div>
+      </div>
+
+      <div class="vercel">
+        <h3>Vercel</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p class="dependency">npm i -g vercel;</p>
+        </div>
+      </div>
+
+      <div class="vlc">
+        <h3>VLC</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install vlc -y;</p>
+        </div>
+      </div>
+
+      <div class="vim">
+        <h3>Vim</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install vim -y;</p>
+        </div>
+      </div>
+
+      <div class="wine">
+        <h3>Wine</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install wine -y;</p>
+        </div>
+      </div>
+
+      <div class="wget">
+        <h3>Wget</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p>sudo apt install wget -y;</p>
+        </div>
+      </div>
+
+      <div class="yarn">
+        <h3>Yarn</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p class="dependency">npm install --global yarn;</p>
+        </div>
+      </div>
+
+      <div class="zsh">
+        <h3>ZSH</h3>
+        <div class="code" onclick="copyToClipboard(event)">
+          <p class="dependency">
+            sudo apt install zsh -y; <br> <br>
+
+            # Install Oh My ZSH <br>
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
+          </p>
         </div>
       </div>
     </section>
