@@ -3,6 +3,11 @@ body {
   color: white;
 }
 
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
 h2 {
   font-style: italic;
 }
@@ -19,7 +24,6 @@ h2 {
   background-color: #1e2329;
   color: white;
   padding: 0px 12px;
-  height: 36px;
   border-style: solid;
   border-color: white;
   border-width: 1px;
