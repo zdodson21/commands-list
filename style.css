@@ -3,9 +3,17 @@ body {
   color: white;
 }
 
+label {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .controls {
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 
 h2 {
@@ -15,6 +23,7 @@ h2 {
 .code-group {
   border-style: solid;
   padding: 0px 12px 12px 12px;
+  margin-bottom: 24px;
 }
 
 .code {
